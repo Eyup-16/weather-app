@@ -1,0 +1,216 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&family=M+PLUS+Rounded+1c&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+
+
+@import url('https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&family=Lato:wght@300;400;700;900&family=M+PLUS+Rounded+1c&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+
+:root {
+    --primary-color: #fafafa;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "M PLUS Rounded 1c", sans-serif;
+    font-weight: 400;
+}
+
+
+
+.container {
+    background: url('/images/5868635252057034410.jpg')no-repeat center center / cover;
+    height: 100vh;
+    display: flex;
+    color: #fff;
+    justify-content: space-between;
+    position: relative;
+    overflow: hidden
+}
+
+
+.weather-info {
+    display: flex;
+    flex-direction: column;
+    padding: 4rem;
+    width: 40%;
+    backdrop-filter: blur(10px);
+    /* Adjust px for desired blur */
+    background-color: rgba(0, 0, 12, 0.5);
+    /* Add transparency */
+    height: 100vh;
+    overflow-y: auto;
+}
+
+.weather {
+    color: #fafafa;
+    position: relative;
+    width: 60%;
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+.weather-info .btn-primary {
+    padding: 1.7rem;
+    border: none;
+    color: #333;
+    background-image: linear-gradient(to right, #fc6076, #ff9a44, #ef9d43, #e75516);
+    box-shadow: 0 4px 15px 0 rgba(252, 104, 110, 0.75);
+    background-size: 300% 100%;
+    transition: all .4s ease-in-out;
+    position: absolute;
+    cursor: pointer;
+    top: 0px;
+    right: 0;
+}
+
+.weather-info .btn-primary:focus,
+.location:focus {
+    outline: 0;
+}
+
+.weather-info .btn-primary:hover {
+    /* background-color: #fb8c2a; */
+    background-position: 100% 0;
+    transition: all .4s ease-in-out;
+
+}
+
+/* cities & atmospher styling */
+.w-location {
+    display: flex;
+    flex-direction: column;
+}
+
+/* input styling */
+.location {
+    border: none;
+    width: 60%;
+    padding: 8px;
+    background: transparent;
+    border-bottom: #888 solid 1px;
+    color: #fff;
+    font-size: larger;
+    margin-bottom: 3rem;
+}
+
+
+/* cities styling  */
+
+.cities {
+    list-style: none;
+    padding: 0;
+    margin-bottom: 3rem;
+    border-bottom: #888 2px solid;
+}
+
+.city {
+    cursor: pointer;
+    padding: 10px;
+    margin: 5px 0;
+    color: #888;
+    width: 30%;
+    font-size: larger;
+    transition: all 0.2s;
+}
+
+.city.targeted {
+    font-weight: 800;
+}
+
+.city:last-child {
+    margin-bottom: 3rem;
+}
+
+.city:hover {
+    font-weight: 800;
+}
+
+/* Details Styling */
+
+.w-details {
+    display: flex;
+    flex-direction: column;
+    line-height: 1.8;
+    border-bottom: #888 2px solid;
+
+}
+
+/* ! Heading styling */
+.w-details .heading {
+    position: relative;
+    font-size: 1.3rem;
+    text-align: center;
+    margin: 10px;
+    padding-bottom: 10px;
+}
+
+/* The underline Styling */
+.heading:after {
+    content: '';
+    position: absolute;
+    width: 100px;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 0;
+    border-bottom: 3px solid #8d8f90;
+}
+
+/* detail Items styling  */
+.w-detail {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+.item {
+    padding: 1rem 0;
+    cursor: pointer;
+    font-weight: 900;
+}
+
+.item:active {
+    color: #888
+}
+
+
+/* ? Weather Home Page Styling */
+
+.weather .w-degree {
+    position: absolute;
+    top: 27rem;
+    left: 10rem;
+    font-size: 6rem;
+    font-weight: 400;
+}
+
+.weather .city-Targeted {
+    position: absolute;
+    top: 29rem;
+    left: 21rem;
+    font-size: 3.3rem;
+    font-weight: 700;
+}
+
+.weather .full-date {
+    position: absolute;
+    top: 33rem;
+    left: 21rem;
+    font-size: 1.1rem;
+    font-weight: 500;
+}
+
+.weather .icon-atmo {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    /* text-align: center; */
+    top: 31rem;
+    left: 33.5rem;
+}
+
+.weather .icon-atmo span {
+    font-size: 1.1rem;
+}

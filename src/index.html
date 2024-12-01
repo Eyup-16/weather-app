@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="A simple weather app to check weather conditions for various locations."
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+      integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <title>Weather App - Check Your Local Weather</title>
+  </head>
+  <body>
+    <section class="container">
+      <div class="weather"></div>
+
+      <aside class="weather-info">
+        <div>
+          <button aria-label="Search" class="btn-primary">
+            <i class="fa-solid fa-magnifying-glass fa-xl"></i>
+          </button>
+        </div>
+        <div class="w-location">
+          <input type="text" class="location" placeholder="Enter a location" />
+          <ul class="cities">
+            <li class="city targeted">New York</li>
+            <li class="city">Boston</li>
+            <li class="city">California</li>
+            <li class="city">Paris</li>
+          </ul>
+        </div>
+        <script src="bundle.js"></script>
+        <div class="w-details"></div>
+
+        <!-- <div class="w-details">
+          <h2 class="heading">Summary</h2>
+          <div class="w-detail">
+            <span class="label item"
+              >Expect a day of partly cloudy with rain</span
+            >
+          </div>
+        </div> -->
+      </aside>
+    </section>
+  </body>
+</html>

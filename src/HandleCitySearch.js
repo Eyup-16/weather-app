@@ -29,5 +29,6 @@ function handleCitySearch() {
     }
   });
 }
+handleCitySearch();
 
 export default handleCitySearch;

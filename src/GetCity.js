@@ -1,3 +1,4 @@
+import fetchWeather from './FetchWeatherApi';
 //  change city name to lat,lon
 function getCity(e) {
   fetch(

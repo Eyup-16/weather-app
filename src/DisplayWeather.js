@@ -1,10 +1,28 @@
 import getGlobalTime from './GetGlobalTime';
+
+const days = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'];
+const months = [
+  'Jan',
+  'Feb',
+  'Mar',
+  'Apr',
+  'May',
+  'Jun',
+  'Jul',
+  'Aug',
+  'Sep',
+  'Oct',
+  'Nov',
+  'Dec',
+];
+
 // The main function to display the weather (make the html dynamically)
 function displayWeather(city, timezone) {
   const Time = new Date();
   const weatherDetails = document.querySelector('.w-details');
   const weather = document.querySelector('.weather');
   console.log(weatherDetails);
+  console.log(weather);
 
   // Weather Details Change
   weatherDetails.innerHTML = ` <h2 class="heading">Weather Details</h2>
@@ -52,8 +70,10 @@ function displayWeather(city, timezone) {
   // temp<10? ... means that if temp less than 10 it will add a 0 to number
   // meaning => in case of 9 it's gonna be 09 .
   weather.innerHTML = `
-                
-              <span class="w-degree">${temp < 10 ? '0' + temp : temp}°</span>
+
+              <span class="w-degree">${
+                temp < 10 && temp > 0 ? '0' + temp : temp
+              }°</span>
             <div class="city-date">
               <span class="city-Targeted">${city.city.name}</span>
               <span class="full-date"> ${getGlobalTime(timezone)} - ${
@@ -66,7 +86,7 @@ function displayWeather(city, timezone) {
               <i class="fa-solid fa-cloud fa-2x"></i>
               <span>${city.list[1].weather[0].main}</span>
             </div>
-              
+
               `;
 }
 

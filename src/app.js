@@ -7,7 +7,6 @@ document.addEventListener('DOMContentLoaded', () => {
   // Default settings
 
   fetchWeather('40.41', '-3.70');
-  handleCitySearch();
 });
 
 // ! IT COULD BE WITHOUT MEANING !
@@ -25,11 +24,4 @@ document.addEventListener('DOMContentLoaded', () => {
 //     });
 // }
 
-// citySearch('algiers');
-////////////////////////////////////////////////////////////
-
-//Warn Event listners
-
-/////////////////////////////////////////
-
-// /////////////////////////////////////////////////////
+// citySearch('madrid');
